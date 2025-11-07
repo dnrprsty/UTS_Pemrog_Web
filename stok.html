@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stok & Katalog Buku</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1><a href="dashboard.html" style="color: white; text-decoration: none;"><i class="fas fa-arrow-left"></i> Katalog Buku</a></h1>
+            <div>
+                <button id="tambah-stok-btn" class="btn btn-info"><i class="fas fa-plus"></i> Tambah Stok Baru</button>
+                <a href="dashboard.html" class="btn btn-secondary">Kembali</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="card">
+            <h2 class="card-title">Daftar Stok Buku Tersedia</h2>
+            <div style="overflow-x: auto;">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Kode</th>
+                            <th>Cover</th>
+                            <th>Nama Barang</th>
+                            <th>Jenis</th>
+                            <th>Edisi</th>
+                            <th>Stok</th>
+                            <th>Harga</th>
+                        </tr>
+                    </thead>
+                    <tbody id="katalog-body">
+                        </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <div id="modal-tambah-stok" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="hideModal('modal-tambah-stok')">&times;</span>
+            <h3>Tambah Item Stok Baru</h3>
+            <form id="form-tambah-stok">
+                <div class="form-group">
+                    <label for="input-kode">Kode Barang</label>
+                    <input type="text" id="input-kode" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="input-nama">Nama Buku</label>
+                    <input type="text" id="input-nama" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="input-jenis">Jenis Barang</label>
+                    <input type="text" id="input-jenis" class="form-control" value="Buku Ajar" required>
+                </div>
+                <div class="form-group">
+                    <label for="input-edisi">Edisi</label>
+                    <input type="number" id="input-edisi" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="input-stok">Stok</label>
+                    <input type="number" id="input-stok" class="form-control" min="1" required>
+                </div>
+                <div class="form-group">
+                    <label for="input-harga">Harga (Rupiah, Tanpa Titik)</label>
+                    <input type="number" id="input-harga" class="form-control" min="0" required>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Tambahkan ke Katalog</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

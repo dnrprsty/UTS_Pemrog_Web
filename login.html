@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Toko Buku Noers</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="login-wrapper">
+
+    <main class="card login-card">
+        <header>
+            <h2> Login Toko Buku Noers</h2>
+        </header>
+        <form id="login-form">
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" class="form-control" required>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width: 100%;">Login</button>
+        </form>
+        <div class="login-links">
+            <a href="#" class="modal-trigger" data-modal="modal-lupa">Lupa Password</a>
+            <a href="#" class="modal-trigger" data-modal="modal-daftar">Daftar Akun Baru</a>
+        </div>
+    </main>
+
+    <div id="modal-lupa" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="hideModal('modal-lupa')">&times;</span>
+            <h3>Lupa Password</h3>
+            <p>Fitur ini belum diimplementasikan di *front-end* saja. Silakan hubungi admin.</p>
+            <div class="form-group">
+                <label for="lupa-email">Masukkan Email Anda</label>
+                <input type="email" id="lupa-email" class="form-control">
+            </div>
+            <button class="btn btn-secondary" onclick="hideModal('modal-lupa'); showPopup('Link reset password sudah dikirim ke email Anda (Simulasi).')">Reset Password</button>
+        </div>
+    </div>
+
+    <div id="modal-daftar" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="hideModal('modal-daftar')">&times;</span>
+            <h3>Daftar Akun Baru</h3>
+            <form id="daftar-form">
+                <div class="form-group">
+                    <label for="daftar-nama">Nama Lengkap</label>
+                    <input type="text" id="daftar-nama" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="daftar-email">Email</label>
+                    <input type="email" id="daftar-email" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="daftar-password">Password</label>
+                    <input type="password" id="daftar-password" class="form-control" required>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Daftar</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

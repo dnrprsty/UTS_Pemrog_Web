@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Toko Buku Noers</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1><i class="fas fa-book-open"></i> Toko Buku Noers</h1>
+            <div>
+                <button id="logout-btn" class="btn btn-secondary">Logout</button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h2 class="card-title">Selamat Datang di Dashboard</h2>
+        <p id="greeting-message" style="font-size: 1.2rem; margin-bottom: 30px;"></p>
+        <section class="dashboard-grid">
+            <a href="stok.html" class="card menu-item">
+                <i class="fas fa-list-alt"></i>
+                <h3>Informasi Stok/Katalog</h3>
+            </a>
+            <a href="tracking.html" class="card menu-item">
+                <i class="fas fa-shipping-fast"></i>
+                <h3>Tracking Pengiriman</h3>
+            </a>
+            <a href="checkout.html" class="card menu-item">
+                <i class="fas fa-shopping-cart"></i>
+                <h3>Halaman Pemesanan</h3>
+            </a>
+            <a href="history.html" class="card menu-item">
+                <i class="fas fa-history"></i>
+                <h3>History Transaksi</h3>
+            </a>
+            <a href="laporan.html" class="card menu-item" id="laporan-link">
+                <i class="fas fa-chart-line"></i>
+                <h3>Laporan Pemesanan</h3>
+            </a>
+        </section>
+    </main>
+
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tracking Pengiriman</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1><a href="dashboard.html" style="color: white; text-decoration: none;"><i class="fas fa-shipping-fast"></i> Tracking Pengiriman</a></h1>
+            <a href="dashboard.html" class="btn btn-secondary">Kembali</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="card">
+            <h2 class="card-title">Cari Nomor Delivery Order (DO)</h2>
+            <form id="form-tracking" style="display: flex; gap: 10px;">
+                <div class="form-group" style="flex-grow: 1;">
+                    <label for="nomor-do">Masukkan Nomor DO (Contoh: 20230012)</label>
+                    <input type="text" id="nomor-do" class="form-control" required>
+                </div>
+                <div class="form-group" style="display: flex; align-items: flex-end;">
+                    <button type="submit" class="btn btn-primary">Cari</button>
+                </div>
+            </form>
+        </section>
+
+        <section id="tracking-detail">
+            </section>
+    </main>
+
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
